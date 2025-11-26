@@ -1,7 +1,6 @@
-import { useState } from 'react'
-import fs from 'fs';
 import Instagram from './assets/intagram.png'
 import LinkedIn from './assets/linkedin.png'
+import Whatsapp from './assets/whatsapp.png'
 import './App.css'
 
 function formatDate(){
@@ -76,7 +75,7 @@ function App() {
         <p className='info'>Produzido por Luiz Bortolanza</p>
 
         {/*Criação de paginação com testes de router com react*/}
-        <a href='' className='clima'>Clima?</a>
+        <a href='/quote' className='quote'>Frase</a>
         
         <div className='socialmedia'>
           <a href="">
@@ -86,7 +85,7 @@ function App() {
             <img src={LinkedIn} alt="LinkedIn" />
           </a>
           <a href="">
-            <img src="" alt="Whatsapp" />
+            <img src={Whatsapp} alt="Whatsapp" />
           </a>
         </div>
       </footer>
