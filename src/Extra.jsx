@@ -22,7 +22,6 @@ function ContentUrl(){
     }
     return (
         <>
-
             <p className='quote'>{quotes.slip.advice}</p>
         </>
     );

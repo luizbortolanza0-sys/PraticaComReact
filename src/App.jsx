@@ -13,9 +13,10 @@ function Content({ titulo, conteudo, src }) {
   
   return (
     <div className='content'>
-      <h3 className='subtitulos'>{titulo}</h3>
-      <p className='dataDeCriação'></p>
-      <p className='escrita'>{conteudo}</p>
+      <div>
+        <h3 className='subtitulos'>{titulo}</h3>
+        <p className='escrita'>{conteudo}</p>
+      </div>
       <img src={src} alt="Foto" />
     </div>
   );
@@ -27,8 +28,8 @@ function App() {
     <div className = 'container'>
       <header className='cabecalio'>
         <h1 className='titulo'>Luiz Felipe Cola Bortolanza</h1>
-        <a href="">
-          <img src="" alt="Foto" />
+        <a href="https://github.com/luizbortolanza0-sys" target='blank'>
+          <img src="https://thumbs.dreamstime.com/b/vetor-de-%C3%ADcone-perfil-do-avatar-padr%C3%A3o-foto-usu%C3%A1rio-m%C3%ADdia-social-183042379.jpg" alt="Foto" />
         </a>
       </header>
 
@@ -38,12 +39,12 @@ function App() {
           <Content
           titulo = "React, experiencia com front-end de web"
           conteudo = "Progrmação em front end com tecnologias atuais de progrmação web, junto dos conteudos de JS e CSS"
-          src =""
+          src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa7ECW4xHgJyeIQexegqGhxgHGknkobmD0xA&s"
           />
           <Content
           titulo = "Java, conteudo de orientação a objeto"
           conteudo = "Aprendendo os pilares de orientação a objeto em java, alem de aprender sobre praticas de arquitetura de software como ddd, alem de dominar a sintaxe"
-          src =""
+          src ="https://banner2.cleanpng.com/20180420/wrq/aveffx3dw.webp"
           />
           <Content
           titulo = "C, a linguagem para aprender logica de programação"
