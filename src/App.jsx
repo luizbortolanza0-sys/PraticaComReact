@@ -1,14 +1,28 @@
-import Instagram from './assets/intagram.png'
-import LinkedIn from './assets/linkedin.png'
-import Whatsapp from './assets/whatsapp.png'
-import DevTalks from './assets/devtalks.jpg'
-import './App.css'
+import Instagram from './assets/intagram.png';
+import LinkedIn from './assets/linkedin.png';
+import Whatsapp from './assets/whatsapp.png';
+import DevTalks from './assets/devtalks.jpg';
+import './App.css';
+import { useEffect, useState } from 'react';
 
 function formatDate(){
   const time = new Date();
-  return time.getDate() + "/"+ (time.getMonth()+1) + "/" + time.getFullYear();
+  if(time.getMinutes()<10){
+    return time.getHours()+ ":" + 0+time.getMinutes() +"-" + time.getDate() + "/"+ (time.getMonth()+1) + "/" + time.getFullYear();    
+  }
+  return time.getHours()+ ":" + time.getMinutes() +"-" + time.getDate() + "/"+ (time.getMonth()+1) + "/" + time.getFullYear();
 }
+function DateNow(){
+  const [data, setData] = useState(null);
+  useEffect(()=>{
+    setData(formatDate());
+  },[]);
+    
+  return (
+    <p className='horario'>{data}</p>
+  );
 
+}
 
 function Content({ titulo, conteudo, src }) { 
   
@@ -29,9 +43,12 @@ function App() {
     <div className = 'container'>
       <header className='cabecalio'>
         <h1 className='titulo'>Luiz Felipe Cola Bortolanza</h1>
-        <a href="https://github.com/luizbortolanza0-sys" target='blank'>
-          <img src="https://thumbs.dreamstime.com/b/vetor-de-%C3%ADcone-perfil-do-avatar-padr%C3%A3o-foto-usu%C3%A1rio-m%C3%ADdia-social-183042379.jpg" alt="Foto" />
-        </a>
+        <div className='img+date'>
+          <a href="https://github.com/luizbortolanza0-sys" target='blank'>
+            <img src="https://thumbs.dreamstime.com/b/vetor-de-%C3%ADcone-perfil-do-avatar-padr%C3%A3o-foto-usu%C3%A1rio-m%C3%ADdia-social-183042379.jpg" alt="Foto" />
+          </a>
+          <DateNow/>
+        </div>
       </header>
 
       <main className='conteudo'>

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Extra.css';
-const Url = "https://api.adviceslip.com/advice";
-import axios from 'axios';
+import api from './service/Api.js'
 
 
 
@@ -10,7 +9,7 @@ function ContentUrl(){
 
     useEffect(()=>{
         const conteudo = async()=>{
-            const response = await axios.get(Url);
+            const response = await api.get('/advice');
             const quote = await response.data;
             setQuotes(quote);
         }
