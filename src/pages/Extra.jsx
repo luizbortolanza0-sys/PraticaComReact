@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import './Extra.css';
-import api from './service/Api.js'
+import '../styles/Extra.css';
+import api from '../service/Api.js'
 
 
 

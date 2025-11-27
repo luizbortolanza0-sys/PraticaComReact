@@ -1,8 +1,8 @@
-import './index.css'
+import './styles/index.css'
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import Page from './Page';
+import Page from './routes/Page';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

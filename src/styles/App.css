@@ -19,25 +19,17 @@
     padding-top: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     position: sticky; top: 0;
-    a {
+    a{
         color: #d3c1b4;
         text-decoration: none;
         transition: 0.2s;
         padding-right: 40px;
-    }
-    .titulo{
-        padding-left: 40px;
-        text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
     }
     img{
         height: 120px;
         width: 120px;
         border-radius: 50%;
         box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-    .horario{
-        font-family: 'Times New Roman', Times, serif;
-        align-self:flex-end;
     }
 }
 .conteudo{

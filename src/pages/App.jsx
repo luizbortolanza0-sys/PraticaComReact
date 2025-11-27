@@ -1,8 +1,8 @@
-import Instagram from './assets/intagram.png';
-import LinkedIn from './assets/linkedin.png';
-import Whatsapp from './assets/whatsapp.png';
-import DevTalks from './assets/devtalks.jpg';
-import './App.css';
+import Instagram from '../assets/intagram.png';
+import LinkedIn from '../assets/linkedin.png';
+import Whatsapp from '../assets/whatsapp.png';
+import DevTalks from '../assets/devtalks.jpg';
+import '../styles/App.css';
 import { useEffect, useState } from 'react';
 
 function formatDate(){
@@ -19,7 +19,10 @@ function DateNow(){
   },[]);
     
   return (
-    <p className='horario'>{data}</p>
+    <p style={{
+      fontFamily:" 'Times New Roman', Times, serif",
+      alignSelf:"flex-end"
+    }}>{data}</p>
   );
 
 }
@@ -42,7 +45,10 @@ function App() {
   return(
     <div className = 'container'>
       <header className='cabecalio'>
-        <h1 className='titulo'>Luiz Felipe Cola Bortolanza</h1>
+        <h1 style={{
+          paddingLeft: "40px",
+          textShadow: "1px 1px 1px rgba(0,0,0,0.3)"
+        }}>Luiz Felipe Cola Bortolanza</h1>
         <div className='img+date'>
           <a href="https://github.com/luizbortolanza0-sys" target='blank'>
             <img src="https://thumbs.dreamstime.com/b/vetor-de-%C3%ADcone-perfil-do-avatar-padr%C3%A3o-foto-usu%C3%A1rio-m%C3%ADdia-social-183042379.jpg" alt="Foto" />

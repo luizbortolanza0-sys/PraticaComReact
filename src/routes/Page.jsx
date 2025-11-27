@@ -1,7 +1,7 @@
 // Em src/App.js
 import { Routes, Route } from 'react-router-dom';
-import App from './App';
-import Extra from './Extra'
+import App from '../pages/App.jsx';
+import Extra from '../pages/Extra.jsx'
 
 function Page() {
   return (
