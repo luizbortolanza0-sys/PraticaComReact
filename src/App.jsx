@@ -1,6 +1,7 @@
 import Instagram from './assets/intagram.png'
 import LinkedIn from './assets/linkedin.png'
 import Whatsapp from './assets/whatsapp.png'
+import DevTalks from './assets/devtalks.jpg'
 import './App.css'
 
 function formatDate(){
@@ -39,33 +40,33 @@ function App() {
           <Content
           titulo = "React, experiencia com front-end de web"
           conteudo = "Progrmação em front end com tecnologias atuais de progrmação web, junto dos conteudos de JS e CSS"
-          src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa7ECW4xHgJyeIQexegqGhxgHGknkobmD0xA&s"
+          src ="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
           />
           <Content
           titulo = "Java, conteudo de orientação a objeto"
           conteudo = "Aprendendo os pilares de orientação a objeto em java, alem de aprender sobre praticas de arquitetura de software como ddd, alem de dominar a sintaxe"
-          src ="https://banner2.cleanpng.com/20180420/wrq/aveffx3dw.webp"
+          src ="https://upload.wikimedia.org/wikipedia/pt/thumb/3/30/Java_programming_language_logo.svg/234px-Java_programming_language_logo.svg.png?20190828223431"
           />
           <Content
           titulo = "C, a linguagem para aprender logica de programação"
           conteudo = "Desenvolvimento de atividades com C para aprender um pouco sobre logica de programação, sintaxe de fluxo construção de struct com estudo de ponteiros e alocação dinamica"
-          src =""
+          src ="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png"
           />
           <Content
           titulo = "Dev-Talks"
           conteudo = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam laborum similique debitis odit tempora dolore iste dolor voluptatum molestias placeat. Iusto deleniti cum molestias, dolor sunt alias veritatis aliquid blanditiis!"
-          src =""
+          src ={DevTalks}
           />
           {/*Apenas conteudo complementar para estruturação da pagina*/}
           <Content
           titulo = "C#, estudos a parte"
           conteudo = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam laborum similique debitis odit tempora dolore iste dolor voluptatum molestias placeat. Iusto deleniti cum molestias, dolor sunt alias veritatis aliquid blanditiis!"
-          src =""
+          src ="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/256px-Logo_C_sharp.svg.png?20221121173824"
           />
           <Content
           titulo = "SQL, banco de dados e suas tecnologias"
           conteudo = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam laborum similique debitis odit tempora dolore iste dolor voluptatum molestias placeat. Iusto deleniti cum molestias, dolor sunt alias veritatis aliquid blanditiis!"
-          src =""
+          src ="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/960px-Postgresql_elephant.svg.png"
           />
         </div>
         
@@ -82,7 +83,7 @@ function App() {
           <a href="">
             <img src={Instagram} alt="Instagram" />
           </a>
-          <a href="">
+          <a href="https://br.linkedin.com/in/luiz-felipe-cola-bortolanza-846620269" target='blank'>
             <img src={LinkedIn} alt="LinkedIn" />
           </a>
           <a href="">
