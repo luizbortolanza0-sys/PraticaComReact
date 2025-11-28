@@ -30,7 +30,15 @@ function DateNow(){
 function Content({ titulo, conteudo, src }) { 
   
   return (
-    <div className='content'>
+    <div style={{
+      padding: "20px",
+      display: "flex",
+      flexDirection:"row",
+      alignItems: "center",
+      paddingTop: "10px",
+      paddingBottom: "20px",
+      paddingLeft:"30px"
+    }}>
       <div>
         <h3 className='subtitulos'>{titulo}</h3>
         <p style={{
@@ -49,21 +57,62 @@ function App() {
   
 
   return(
-    <div className = 'container'>
-      <header className='cabecalio'>
+    <div style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "flex-start",
+      backgroundColor: "#E5E7EB",
+      height: "100%",
+      width: "100%"
+    }} >
+      <header style={{
+        backgroundColor: "#024552",
+        width: "100%",
+        height: "30%",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        borderBottom: "2px solid #4A2E1F",
+        paddingBottom: "20px",
+        paddingTop: "20px",
+        boxShadow: "0 5px 15px rgba(0,0,0,0.3)",
+        position: "sticky", 
+        top:"0"
+      }}>
         <h1 style={{
           paddingLeft: "40px",
           textShadow: "1px 1px 1px rgba(0,0,0,0.3)"
         }}>Luiz Felipe Cola Bortolanza</h1>
         <div className='img+date'>
-          <a href="https://github.com/luizbortolanza0-sys" target='blank'>
-            <img src="https://thumbs.dreamstime.com/b/vetor-de-%C3%ADcone-perfil-do-avatar-padr%C3%A3o-foto-usu%C3%A1rio-m%C3%ADdia-social-183042379.jpg" alt="Foto" />
+          <a href="https://github.com/luizbortolanza0-sys" target='blank'
+          style={{
+            color: "#d3c1b4",
+            textDecoration: "none",
+            transition: "0.2s",
+            paddingRight: "40px"
+          }}>
+            <img src="https://thumbs.dreamstime.com/b/vetor-de-%C3%ADcone-perfil-do-avatar-padr%C3%A3o-foto-usu%C3%A1rio-m%C3%ADdia-social-183042379.jpg" alt="Foto" 
+            style={{
+              height: "120px",
+              width: "120px",
+              borderRadius: "50%",
+              boxShadow: "0 5px 15px rgba(0,0,0,0.3)"
+            }}/>
           </a>
           <DateNow/>
         </div>
       </header>
 
-      <main className='conteudo'>
+      <main className='conteudo' style={{
+        width: "60%",
+        height: "auto",
+        backgroundColor: "#173D33",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        boxShadow: "0 5px 15px rgba(0,0,0,0.3)"
+      }}>
         <h2 style={{
           padding:"20px 0px 20px 35px",
           fontSize: "30px"
@@ -105,25 +154,52 @@ function App() {
     
       </main>
 
-      <footer className='rodape'>
+      <footer style={{
+        width: "100%",
+        height: "auto",
+        display: "flex",
+        justifyContent: "space-around",
+        alignItems: "center",
+        backgroundColor: "#25150e",
+        paddingBottom: "20px",
+        paddingTop: "20px",
+        boxShadow: "0 5px 15px rgba(0,0,0,0.3)"
+      }}>
         <p className='info'>Produzido por Luiz Bortolanza</p>
 
         {/*Criação de paginação com testes de router com react*/}
         <a href='/quote' className='quote'>Frase</a>
         
         <div className='socialmedia'>
-          <a href="https://www.instagram.com/luizbortolanza7?igsh=MWJweDE4OWt6cWIwag%3D%3D&utm_source=qr" target='blank'>
-            <img src={Instagram} alt="Instagram" />
+          <a href="https://www.instagram.com/luizbortolanza7?igsh=MWJweDE4OWt6cWIwag%3D%3D&utm_source=qr" target='blank' style={{
+            color: "#d3c1b4",
+            textDecoration: "none",
+            transition: "0.2s",
+            
+          }}>
+            <img src={Instagram} alt="Instagram" style={{
+              height: "50px",
+              width: "50px",
+              borderRadius: "15px"
+            }}/>
           </a>
           <a href="https://br.linkedin.com/in/luiz-felipe-cola-bortolanza-846620269" target='blank'>
-            <img src={LinkedIn} alt="LinkedIn" />
+            <img src={LinkedIn} alt="LinkedIn" style={{
+              height: "50px",
+              width: "50px",
+              borderRadius: "15px"
+            }}/>
           </a>
           <a href="https://api.whatsapp.com/send/?phone=5549999860752&text&type=phone_number" target='blank'>
-            <img src={Whatsapp} alt="Whatsapp" />
+            <img src={Whatsapp} alt="Whatsapp" style={{
+              height: "50px",
+              width: "50px",
+              borderRadius: "15px"
+            }}/>
           </a>
         </div>
       </footer>
     </div>
   ); 
 }
-export default App
+export default App;
