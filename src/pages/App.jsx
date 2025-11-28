@@ -33,9 +33,15 @@ function Content({ titulo, conteudo, src }) {
     <div className='content'>
       <div>
         <h3 className='subtitulos'>{titulo}</h3>
-        <p className='escrita'>{conteudo}</p>
+        <p style={{
+          textShadow: "1px 1px 1px rgba(0,0,0,0.3)"
+        }}>{conteudo}</p>
       </div>
-      <img src={src} alt="Foto" />
+      <img src={src} alt="Foto" style={{
+        height: "110px",
+        width: "110px",
+        paddingLeft: "10px"
+      }}/>
     </div>
   );
 }
@@ -58,7 +64,10 @@ function App() {
       </header>
 
       <main className='conteudo'>
-        <h2 className='titulo2'>Experiencias</h2>
+        <h2 style={{
+          padding:"20px 0px 20px 35px",
+          fontSize: "30px"
+        }}>Experiencias</h2>
         <div>
           <Content
           titulo = "React, experiencia com front-end de web"
@@ -103,13 +112,13 @@ function App() {
         <a href='/quote' className='quote'>Frase</a>
         
         <div className='socialmedia'>
-          <a href="">
+          <a href="https://www.instagram.com/luizbortolanza7?igsh=MWJweDE4OWt6cWIwag%3D%3D&utm_source=qr" target='blank'>
             <img src={Instagram} alt="Instagram" />
           </a>
           <a href="https://br.linkedin.com/in/luiz-felipe-cola-bortolanza-846620269" target='blank'>
             <img src={LinkedIn} alt="LinkedIn" />
           </a>
-          <a href="">
+          <a href="https://api.whatsapp.com/send/?phone=5549999860752&text&type=phone_number" target='blank'>
             <img src={Whatsapp} alt="Whatsapp" />
           </a>
         </div>

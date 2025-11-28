@@ -40,11 +40,6 @@
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    .titulo2{
-        padding:20px 0px 20px 35px;
-        font-size: 30px;
-
-    }
 }
 .content{
     padding: 20px;
@@ -54,14 +49,6 @@
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left:30px;
-    .escrita{
-        text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-    }
-    img{
-        height: 110px;
-        width: 110px;
-        padding-left: 10px;
-    }
     
 }
 .rodape{
