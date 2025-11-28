@@ -168,7 +168,7 @@ function App() {
         <p className='info'>Produzido por Luiz Bortolanza</p>
 
         {/*Criação de paginação com testes de router com react*/}
-        <a href='/quote' className='quote'>Frase</a>
+        <a href='/quote' className='frase' >Frase</a>
         
         <div className='socialmedia'>
           <a href="https://www.instagram.com/luizbortolanza7?igsh=MWJweDE4OWt6cWIwag%3D%3D&utm_source=qr" target='blank' style={{
@@ -183,7 +183,12 @@ function App() {
               borderRadius: "15px"
             }}/>
           </a>
-          <a href="https://br.linkedin.com/in/luiz-felipe-cola-bortolanza-846620269" target='blank'>
+          <a href="https://br.linkedin.com/in/luiz-felipe-cola-bortolanza-846620269" target='blank'style={{
+            color: "#d3c1b4",
+            textDecoration: "none",
+            transition: "0.2s",
+            
+          }}>
             <img src={LinkedIn} alt="LinkedIn" style={{
               height: "50px",
               width: "50px",

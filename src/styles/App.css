@@ -1,4 +1,9 @@
-.socialmedia a:hover {
+.frase:hover{
   color: white;
   text-decoration: underline;
+}
+.frase{
+  color: #d3c1b4;
+  text-decoration: none;
+  transition: 0.2s
 }
