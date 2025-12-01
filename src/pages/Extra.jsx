@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import api from '../service/Api.js'
+import Button from "@mui/material/Button"
+import Container from "@mui/material/Container"
+import Box from "@mui/material/Box"
 
 
 
@@ -37,35 +40,24 @@ function ContentUrl(){
 
 
 
-function Botao(){
+
+function Extra(){
     const navigate = useNavigate();
     const navegacao = () =>{
         navigate('/');
-    }   
-    return(
-        <button onClick={navegacao} style={{
-            border:"0px",
-            borderRadius:"10px",
-            padding:"10px",
-            backgroundColor: "#F48C00",
-            color:"#FDE68A",
-            cursor:"pointer",
-            boxShadow: "0 5px 15px rgba(0,0,0,0.3)"
-            
-        }}>Retornar para pagina principal</button>
-    );
-}
+    }
 
-function Extra(){
-    return(<div style={{
+
+    return(
+    <Container sx={{
         width: "100%",
         height: "100vh",
         backgroundColor: "ivory",
         display: "flex",
         alignItems: "center",
         justifyContent: "center"
-    }}>
-        <div style={{
+    }} maxWidth="xl">
+        <Box sx={{
             backgroundColor:"#34495E",
             overflowWrap: "break-word",
             width: "38%",
@@ -79,9 +71,17 @@ function Extra(){
         }}>
             <h1>Concelhos Aleatorios</h1>        
             <ContentUrl/>
-            <Botao/>
-        </div>
-    </div>
+            <Button onClick={navegacao} size="medium" sx={{
+                border:"0px",
+                borderRadius:"10px",
+                padding:"10px",
+                backgroundColor: "#F48C00",
+                color:"#FDE68A",
+                cursor:"pointer",
+                boxShadow: "0 5px 15px rgba(0,0,0,0.3)"
+            }}>Volar para Pagina</Button>
+        </Box>
+    </Container>
     );
 }
 

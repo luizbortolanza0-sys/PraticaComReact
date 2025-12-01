@@ -4,7 +4,7 @@ import Whatsapp from '../assets/whatsapp.png';
 import DevTalks from '../assets/devtalks.jpg';
 import '../styles/App.css';
 import { useEffect, useState } from 'react';
-
+import {Container, Box }from "@mui/material"
 function formatDate(){
   const time = new Date();
   if(time.getMinutes()<10){
@@ -57,15 +57,15 @@ function App() {
   
 
   return(
-    <div style={{
+    <Container sx={{
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "flex-start",
       backgroundColor: "#E5E7EB",
       height: "100%",
-      width: "100%"
-    }} >
+      width: "100%",
+    }} maxWidth = "xl">
       <header style={{
         backgroundColor: "#024552",
         width: "100%",
@@ -84,7 +84,7 @@ function App() {
           paddingLeft: "40px",
           textShadow: "1px 1px 1px rgba(0,0,0,0.3)"
         }}>Luiz Felipe Cola Bortolanza</h1>
-        <div className='img+date'>
+        <Box >
           <a href="https://github.com/luizbortolanza0-sys" target='blank'
           style={{
             color: "#d3c1b4",
@@ -101,7 +101,7 @@ function App() {
             }}/>
           </a>
           <DateNow/>
-        </div>
+        </Box>
       </header>
 
       <main className='conteudo' style={{
@@ -204,7 +204,7 @@ function App() {
           </a>
         </div>
       </footer>
-    </div>
+    </Container>
   ); 
 }
 export default App;
