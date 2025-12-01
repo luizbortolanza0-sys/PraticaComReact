@@ -4,7 +4,12 @@ import Whatsapp from '../assets/whatsapp.png';
 import DevTalks from '../assets/devtalks.jpg';
 import '../styles/App.css';
 import { useEffect, useState } from 'react';
-import {Container, Box }from "@mui/material"
+import {Container, Box, Button }from "@mui/material"
+
+const style = {
+  
+}
+
 function formatDate(){
   const time = new Date();
   if(time.getMinutes()<10){
@@ -21,7 +26,7 @@ function DateNow(){
   return (
     <p style={{
       fontFamily:" 'Times New Roman', Times, serif",
-      alignSelf:"flex-end"
+      alignSelf:"center"
     }}>{data}</p>
   );
 
@@ -84,13 +89,15 @@ function App() {
           paddingLeft: "40px",
           textShadow: "1px 1px 1px rgba(0,0,0,0.3)"
         }}>Luiz Felipe Cola Bortolanza</h1>
-        <Box >
-          <a href="https://github.com/luizbortolanza0-sys" target='blank'
-          style={{
+        <Box sx={{
+          display:"flex",
+          flexDirection:'column',
+          paddingRight: "60px"
+        }} >
+          <Button href="https://github.com/luizbortolanza0-sys" target='blank' sx={{
             color: "#d3c1b4",
             textDecoration: "none",
             transition: "0.2s",
-            paddingRight: "40px"
           }}>
             <img src="https://thumbs.dreamstime.com/b/vetor-de-%C3%ADcone-perfil-do-avatar-padr%C3%A3o-foto-usu%C3%A1rio-m%C3%ADdia-social-183042379.jpg" alt="Foto" 
             style={{
@@ -99,12 +106,13 @@ function App() {
               borderRadius: "50%",
               boxShadow: "0 5px 15px rgba(0,0,0,0.3)"
             }}/>
-          </a>
+          </Button>
+
           <DateNow/>
         </Box>
       </header>
 
-      <main className='conteudo' style={{
+      <Container sx={{
         width: "60%",
         height: "auto",
         backgroundColor: "#173D33",
@@ -117,7 +125,7 @@ function App() {
           padding:"20px 0px 20px 35px",
           fontSize: "30px"
         }}>Experiencias</h2>
-        <div>
+        <Container>
           <Content
           titulo = "React, experiencia com front-end de web"
           conteudo = "Progrmação em front end com tecnologias atuais de progrmação web, junto dos conteudos de JS e CSS"
@@ -149,10 +157,8 @@ function App() {
           conteudo = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam laborum similique debitis odit tempora dolore iste dolor voluptatum molestias placeat. Iusto deleniti cum molestias, dolor sunt alias veritatis aliquid blanditiis!"
           src ="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/960px-Postgresql_elephant.svg.png"
           />
-        </div>
-        
-    
-      </main>
+        </Container>
+      </Container>
 
       <footer style={{
         width: "100%",
@@ -171,37 +177,27 @@ function App() {
         <a href='/quote' className='frase' >Frase</a>
         
         <div className='socialmedia'>
-          <a href="https://www.instagram.com/luizbortolanza7?igsh=MWJweDE4OWt6cWIwag%3D%3D&utm_source=qr" target='blank' style={{
-            color: "#d3c1b4",
-            textDecoration: "none",
-            transition: "0.2s",
-            
-          }}>
+          <Button target='blank' href='https://www.instagram.com/luizbortolanza7?igsh=MWJweDE4OWt6cWIwag%3D%3D&utm_source=qr'>
             <img src={Instagram} alt="Instagram" style={{
               height: "50px",
               width: "50px",
               borderRadius: "15px"
             }}/>
-          </a>
-          <a href="https://br.linkedin.com/in/luiz-felipe-cola-bortolanza-846620269" target='blank'style={{
-            color: "#d3c1b4",
-            textDecoration: "none",
-            transition: "0.2s",
-            
-          }}>
+          </Button>
+          <Button target='blank' href='https://br.linkedin.com/in/luiz-felipe-cola-bortolanza-846620269'>
             <img src={LinkedIn} alt="LinkedIn" style={{
               height: "50px",
               width: "50px",
               borderRadius: "15px"
             }}/>
-          </a>
-          <a href="https://api.whatsapp.com/send/?phone=5549999860752&text&type=phone_number" target='blank'>
+          </Button>
+          <Button target='blank' href='https://wa.me/554999860752'>
             <img src={Whatsapp} alt="Whatsapp" style={{
               height: "50px",
               width: "50px",
               borderRadius: "15px"
             }}/>
-          </a>
+          </Button>
         </div>
       </footer>
     </Container>
