@@ -2,14 +2,15 @@ import Instagram from '../assets/intagram.png';
 import LinkedIn from '../assets/linkedin.png';
 import Whatsapp from '../assets/whatsapp.png';
 import DevTalks from '../assets/devtalks.jpg';
-import '../styles/App.css';
 import { useEffect, useState } from 'react';
 import {Container, Box, Button }from "@mui/material"
 
 const style = {
-  
 }
-
+function REtunr(){
+  return(  <a  className='frase' >Frase</a>  
+)
+}
 function formatDate(){
   const time = new Date();
   if(time.getMinutes()<10){
@@ -73,7 +74,7 @@ function App() {
     }} maxWidth = "xl">
       <header style={{
         backgroundColor: "#024552",
-        width: "100%",
+        width: "103.5%",
         height: "30%",
         display: "flex",
         justifyContent: "space-between",
@@ -161,7 +162,7 @@ function App() {
       </Container>
 
       <footer style={{
-        width: "100%",
+        width: "103.5%",
         height: "auto",
         display: "flex",
         justifyContent: "space-around",
@@ -174,8 +175,16 @@ function App() {
         <p className='info'>Produzido por Luiz Bortolanza</p>
 
         {/*Criação de paginação com testes de router com react*/}
-        <a href='/quote' className='frase' >Frase</a>
-        
+        <Button variant='text' href='/quote' sx={{
+          color: '#d3c1b4',
+          textDecoration: 'none',
+          transition: '0.2s',
+          "&:hover":{
+            color: 'white',
+            textDecoration: 'underline'
+          }
+        }} >Frase</Button>
+                
         <div className='socialmedia'>
           <Button target='blank' href='https://www.instagram.com/luizbortolanza7?igsh=MWJweDE4OWt6cWIwag%3D%3D&utm_source=qr'>
             <img src={Instagram} alt="Instagram" style={{

@@ -78,7 +78,10 @@ function Extra(){
                 backgroundColor: "#F48C00",
                 color:"#FDE68A",
                 cursor:"pointer",
-                boxShadow: "0 5px 15px rgba(0,0,0,0.3)"
+                boxShadow: "0 5px 15px rgba(0,0,0,0.3)",
+                "&:hover":{
+                    backgroundColor:"#ffa835ff"
+                }
             }}>Volar para Pagina</Button>
         </Box>
     </Container>
