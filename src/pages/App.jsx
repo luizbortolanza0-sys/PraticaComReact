@@ -3,14 +3,9 @@ import LinkedIn from '../assets/linkedin.png';
 import Whatsapp from '../assets/whatsapp.png';
 import DevTalks from '../assets/devtalks.jpg';
 import { useEffect, useState } from 'react';
-import {Container, Box, Button }from "@mui/material"
+import {Container, Box, Button }from "@mui/material";
+import {theme} from "../styles/theme.jsx"
 
-const style = {
-}
-function REtunr(){
-  return(  <a  className='frase' >Frase</a>  
-)
-}
 function formatDate(){
   const time = new Date();
   if(time.getMinutes()<10){
@@ -68,27 +63,27 @@ function App() {
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "flex-start",
-      backgroundColor: "#E5E7EB",
+      backgroundColor: theme.bg.first,
       height: "100%",
       width: "100%",
     }} maxWidth = "xl">
       <header style={{
-        backgroundColor: "#024552",
-        width: "103.5%",
+        backgroundColor: theme.bg.header.color,
+        width: theme.bg.widthRight,
         height: "30%",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        borderBottom: "2px solid #4A2E1F",
+        borderBottom: theme.bg.header.underline,
         paddingBottom: "20px",
         paddingTop: "20px",
-        boxShadow: "0 5px 15px rgba(0,0,0,0.3)",
+        boxShadow: theme.sdw.bxSdw,
         position: "sticky", 
         top:"0"
       }}>
         <h1 style={{
           paddingLeft: "40px",
-          textShadow: "1px 1px 1px rgba(0,0,0,0.3)"
+          textShadow: theme.sdw.txSdw
         }}>Luiz Felipe Cola Bortolanza</h1>
         <Box sx={{
           display:"flex",
@@ -105,10 +100,9 @@ function App() {
               height: "120px",
               width: "120px",
               borderRadius: "50%",
-              boxShadow: "0 5px 15px rgba(0,0,0,0.3)"
+              boxShadow: theme.sdw.bxSdw
             }}/>
           </Button>
-
           <DateNow/>
         </Box>
       </header>
@@ -120,7 +114,7 @@ function App() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        boxShadow: "0 5px 15px rgba(0,0,0,0.3)"
+        boxShadow: theme.sdw.bxSdw
       }}>
         <h2 style={{
           padding:"20px 0px 20px 35px",
@@ -162,15 +156,15 @@ function App() {
       </Container>
 
       <footer style={{
-        width: "103.5%",
+        width: theme.bg.widthRight,
         height: "auto",
         display: "flex",
         justifyContent: "space-around",
         alignItems: "center",
-        backgroundColor: "#25150e",
+        backgroundColor: theme.bg.footer.bgColor,
         paddingBottom: "20px",
         paddingTop: "20px",
-        boxShadow: "0 5px 15px rgba(0,0,0,0.3)"
+        boxShadow: theme.sdw.bxSdw
       }}>
         <p className='info'>Produzido por Luiz Bortolanza</p>
 
@@ -185,29 +179,17 @@ function App() {
           }
         }} >Frase</Button>
                 
-        <div className='socialmedia'>
+        <Box>
           <Button target='blank' href='https://www.instagram.com/luizbortolanza7?igsh=MWJweDE4OWt6cWIwag%3D%3D&utm_source=qr'>
-            <img src={Instagram} alt="Instagram" style={{
-              height: "50px",
-              width: "50px",
-              borderRadius: "15px"
-            }}/>
+            <img src={Instagram} alt="Instagram" style={theme.bg.footer.iconSize}/>
           </Button>
           <Button target='blank' href='https://br.linkedin.com/in/luiz-felipe-cola-bortolanza-846620269'>
-            <img src={LinkedIn} alt="LinkedIn" style={{
-              height: "50px",
-              width: "50px",
-              borderRadius: "15px"
-            }}/>
+            <img src={LinkedIn} alt="LinkedIn" style={theme.bg.footer.iconSize}/>
           </Button>
           <Button target='blank' href='https://wa.me/554999860752'>
-            <img src={Whatsapp} alt="Whatsapp" style={{
-              height: "50px",
-              width: "50px",
-              borderRadius: "15px"
-            }}/>
+            <img src={Whatsapp} alt="Whatsapp" style={theme.bg.footer.iconSize}/>
           </Button>
-        </div>
+        </Box>
       </footer>
     </Container>
   ); 

@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import api from '../service/Api.js'
 import Button from "@mui/material/Button"
 import Container from "@mui/material/Container"
 import Box from "@mui/material/Box"
+import {theme} from "../styles/theme.jsx"
 
 
 
@@ -24,14 +25,14 @@ function ContentUrl(){
     }
     return (
         <>
-            <p className='quote' style={{
+            <p style={{
                 width: "80%",
                 padding: "15px",
-                boxShadow: "0 5px 15px rgba(0,0,0,0.3)",
+                boxShadow: theme.sdw.bxSdw,
                 borderRadius: "50px",
                 marginTop: "18px",
                 marginBottom:"10px",
-                backgroundColor: "#4A6C8A",
+                backgroundColor: theme.bgextra.quote,
                 textAlign: "center"
             }}>"{quotes.slip.advice}"</p>
         </>
@@ -52,13 +53,13 @@ function Extra(){
     <Container sx={{
         width: "100%",
         height: "100vh",
-        backgroundColor: "ivory",
+        backgroundColor: theme.bgextra.back,
         display: "flex",
         alignItems: "center",
         justifyContent: "center"
     }} maxWidth="xl">
         <Box sx={{
-            backgroundColor:"#34495E",
+            backgroundColor:theme.bgextra.box,
             overflowWrap: "break-word",
             width: "38%",
             height: "40%",
@@ -67,7 +68,7 @@ function Extra(){
             justifyContent: "center",
             alignItems: "center",
             borderRadius: "50px",
-            boxShadow: "0 5px 15px rgba(0,0,0,0.3)"
+            boxShadow: theme.sdw.bxSdw
         }}>
             <h1>Concelhos Aleatorios</h1>        
             <ContentUrl/>
@@ -75,12 +76,12 @@ function Extra(){
                 border:"0px",
                 borderRadius:"10px",
                 padding:"10px",
-                backgroundColor: "#F48C00",
-                color:"#FDE68A",
+                backgroundColor: theme.bgextra.button,
+                color:theme.bgextra.font,
                 cursor:"pointer",
-                boxShadow: "0 5px 15px rgba(0,0,0,0.3)",
+                boxShadow: theme.sdw.bxSdw,
                 "&:hover":{
-                    backgroundColor:"#ffa835ff"
+                    backgroundColor: theme.bgextra.buttonHover
                 }
             }}>Volar para Pagina</Button>
         </Box>
